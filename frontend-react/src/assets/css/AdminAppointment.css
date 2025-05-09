@@ -1,0 +1,6 @@
+#admin-appt-client-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; /* Aligns items vertically */
+  gap: 1rem;
+}

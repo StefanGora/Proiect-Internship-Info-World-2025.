@@ -1,0 +1,60 @@
+<div *ngIf="clientData">
+  <div class="client-info">
+    <h2>Client Info</h2>
+    <p><strong>Id:</strong> {{ clientData.id }}</p>
+    <p><strong>Name:</strong> {{ clientData.name }}</p>
+    <button (click)="logout()">Logout</button>
+  </div>
+
+  <div class="client-content">
+    <!-- Cars Section -->
+    <div class="client-cars">
+      <h3>Cars:</h3>
+      <ng-container *ngIf="cars.length > 0; else noCars">
+        <app-car *ngFor="let car of cars" [car]="car"></app-car>
+        <button *ngIf="!allCarsLoaded" (click)="loadClientCars(clientData.id)">See More</button>
+      </ng-container>    
+      <ng-template #noCars>
+        <p>No cars found for this client.</p>
+      </ng-template>
+    </div>
+
+    <!-- Appointments Section -->
+    <div class="client-appointments">
+      <h3>Appointments:</h3>
+      <ng-container *ngIf="appointments.length > 0; else noAppointments">
+        <app-appointment *ngFor="let appointment of appointments" [appointment]="appointment"></app-appointment>
+        <button *ngIf="!allAppointmentsLoaded" (click)="loadClientAppointments(clientData.id)">See More</button>
+      </ng-container>
+      <ng-template #noAppointments>
+        <p>No accepted appointments found for this client.</p>
+      </ng-template>
+    </div>
+  </div>
+</div>
+
+<div class="client-content">
+  <!-- Cars Section -->
+  <div class="client-cars">
+    <h3>Cars:</h3>
+    <ng-container *ngIf="cars.length > 0; else noCars">
+      <app-car *ngFor="let car of cars" [car]="car"></app-car>
+      <button *ngIf="!allCarsLoaded" (click)="loadClientCars(clientData.id)">See More</button>
+    </ng-container>    
+    <ng-template #noCars>
+      <p>No cars found for this client.</p>
+    </ng-template>
+  </div>
+
+<!-- Appointments Section -->
+<div class="client-appointments">
+  <h3>Appointments:</h3>
+  <ng-container *ngIf="appointments.length > 0; else noAppointments">
+    <app-appointment *ngFor="let appointment of appointments" [appointment]="appointment"></app-appointment>
+    <button *ngIf="!allAppointmentsLoaded" (click)="loadClientAppointments(clientData.id)">See More</button>
+  </ng-container>
+  <ng-template #noAppointments>
+    <p>No accepted appointments found for this client.</p>
+  </ng-template>
+</div>
+

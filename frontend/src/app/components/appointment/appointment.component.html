@@ -1,0 +1,10 @@
+<div class="appointment-card">
+    <h4>{{ appointment.action | titlecase }} Appointment</h4>
+    <ul>
+      <li><strong>Date:</strong> {{ appointment.appointment_day }}</li>
+      <li><strong>Time:</strong> {{ appointment.appointment_time }}</li>
+      <li><strong>Car:</strong> {{ appointment.brand }} {{ appointment.model }}</li>
+      <li><strong>Contact Method:</strong> {{ appointment.contact_method }}</li>
+    </ul>
+  </div>
+  

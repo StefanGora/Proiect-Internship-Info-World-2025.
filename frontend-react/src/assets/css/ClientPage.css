@@ -1,0 +1,4 @@
+#client-info-container {
+    display: flex;
+    gap: 200px;
+}
