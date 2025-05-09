@@ -102,20 +102,74 @@ routes/
 Some Angulara Prototype 
 
 ### frontend-react/
-frontend-react/  
-public/                  # Static assets (HTML, icons, etc.)  
-App.tsx                  # Root React component  
-main.tsx                 # Entry point  
-assets/                  # CSS and media  
-components/              # Reusable UI components  
-hooks/                   # Custom React hooks  
-models/                  # TypeScript data models  
-pages/                   # Route-level page components  
-types/                   # Type definitions  
-vite.config.ts           # Vite configuration  
-package.json             # Frontend dependencies and scripts  
-tsconfig.json            # TypeScript compiler config  
-tsconfig.node.json       # Node-specific TS config  
+frontend-react/
+index.html                     # Main HTML file used by Vite during build and development
+package.json                   # Lists project dependencies and npm scripts
+package-lock.json              # Locks dependency versions for reproducibility
+README.md                      # Project overview and usage instructions
+tsconfig.json                  # Root TypeScript configuration
+tsconfig.app.json              # TypeScript config specific to the React app
+tsconfig.node.json             # TypeScript config for Node-related code (if any)
+vite.config.ts                 # Vite development/build configuration
+eslint.config.js               # ESLint rules for code quality
+public/                        # Public static assets (copied as-is during build)
+  vite.svg                     # Default Vite logo (can be replaced)
+src/                           # Application source code
+  App.tsx                      # Root React component containing the main layout
+  main.tsx                     # Application entry point (mounts App component)
+  vite-env.d.ts                # Vite-specific TypeScript declarations
+  assets/                      # Static frontend assets
+    css/                       # CSS styles grouped by component/page
+      AdminAppointment.css
+      App.css
+      CarForm.css
+      ClientPage.css
+      index.css
+      MakeAppointment.css
+    svg/                       # SVG graphics used in UI
+      react.svg
+  components/                  # Reusable UI components (grouped by purpose)
+    AddCarFormComponent.tsx            # Form for adding a car
+    AdminAppointmentCardComponent.tsx  # Card for admin to view/manage an appointment
+    AppointmentCardComponent.tsx       # General appointment display card
+    AppointmentListComponent.tsx       # List of appointments (for client/admin)
+    AvailabilityFormComponent.tsx      # Form to check available appointment slots
+    CarCardComponent.tsx               # UI component for displaying car info
+    CarListComponent.tsx               # Displays list of client’s cars
+    CloseTicketFormComponent.tsx       # Admin form to close appointment/ticket
+    MakeAppointmentFormComponent.tsx   # Client form to book new appointment
+    TicketComponent.tsx                # Represents a repair/service ticket
+    TicketListComponent.tsx            # List of all tickets (for admin)
+    UserProfileComponent.tsx           # Displays client profile information
+  hooks/                         # Custom React hooks for API and state logic
+    useAdminAppointments.ts       # Fetch admin appointment data
+    useAdminLogin.ts              # Handle admin login flow
+    useCancelAppointment.ts       # Cancel a client appointment
+    useCloseTicket.ts             # Submit form to close ticket
+    useGetAvailability.ts         # Get available time slots for appointments
+    useGetClientAppointments.ts   # Fetch client's appointment history
+    useGetClientById.ts           # Fetch client data by ID
+    useGetClientCars.ts           # Fetch list of client’s registered cars
+    useInsertCar.ts               # API logic to insert a new car
+    useSimulateLogin.ts           # Simulate a client login 
+    useSubmitAppointments.ts      # Submit appointment booking form
+    useUpdateAppointment.ts       # Patch/update existing appointments
+  models/                        # TypeScript data models for strong typing
+    admin-appointment.model.ts
+    appointment.model.ts
+    car.model.ts
+    client.model.ts
+  pages/                         # Top-level pages mapped to routes
+    AcceptedAppointmentsPage.tsx     # Admin view of accepted appointments
+    AdminPage.tsx                    # Main dashboard for admin
+    ClientPage.tsx                   # Main dashboard for clients
+    LoginPage.tsx                    # Login page (admin/client selection)
+    PendingAppointmentsPage.tsx      # Admin view of pending appointments
+  types/                         # Additional custom type definitions
+    appointmentFormData.ts         # Types for appointment form fields
+    carFormData.types.ts           # Types for car registration form
+ 
+
 
 ## 📄 Database Schema
 
