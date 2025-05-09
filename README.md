@@ -51,44 +51,53 @@ You can choose different port numbers either in the script file or the manual ap
 
 ### backend/
 backend/
-├── .env.development     # Environment variables for development mode
-├── .env.production      # Environment variables for production mode
-├── .gitignore           # Files and folders ignored by Git
-├── .nvmrc               # Defines the Node.js version for the project
-├── server.js            # Main Express server file
-├── package.json         # Project metadata, dependencies, and scripts
-├── node_modules/        # Installed npm packages
-├── scripts/
-│   └── generate-env.sh  # Script to auto-generate .env files
-├── db/
-│   ├── database.js          # Initialize and return an in-memory SQLite database
-│   ├── schema.js            # Define and create the database schema
-│   └── seed/
-│       ├── seed.js          # Main seeding script
-│       ├── clientsSeed.js   # Client seeding module
-│       ├── carsSeed.js      # Car seeding module
-│       ├── appointmentsSeed.js # Appointment seeding module
-│       └── historySeed.js   # History seeding module
-├── routes/
-│   ├── create/
-│   │   ├── createAppointment.js    # Create appointment with validation
-│   │   ├── createCar.js            # Add car for a client
-│   │   ├── createClient.js         # Register new client
-│   │   └── createHistoryEntry.js   # Log service history after appointment
-│   ├── get/
-│   │   ├── appointments.js         # Get appointments
-│   │   ├── cars.js                 # Get cars
-│   │   ├── clients.js              # Get clients
-│   │   ├── getCarHistory.js        # Get history by car ID
-│   │   ├── getClientAppointments.js # Get client appointments
-│   │   ├── getClientCars.js        # Get client cars
-│   │   └── history.js              # Get full service history
-│   ├── patch/
-│   │   ├── patchAppointments.js    # Update appointment fields
-│   │   ├── patchClients.js         # Update client info
-│   │   └── patchHistory.js         # Update history entry
-│   └── utills/
-│       └── checkAvailability.js   # Check appointment slot availability
+backend/
+.env.development         # Environment variables for development mode  
+.env.production          # Environment variables for production mode  
+.gitignore               # Files and folders ignored by Git  
+.nvmrc                   # Defines the Node.js version for the project  
+server.js                # Main Express server file  
+package.json             # Project metadata, dependencies, and scripts  
+node_modules/            # Installed npm packages  
+
+scripts/  
+  generate-env.sh        # Script to auto-generate .env files  
+
+db/  
+  database.js            # Initialize and return an in-memory SQLite database  
+  schema.js              # Define and create the database schema  
+
+  seed/  
+    seed.js              # Main seeding script  
+    clientsSeed.js       # Client seeding module  
+    carsSeed.js          # Car seeding module  
+    appointmentsSeed.js  # Appointment seeding module  
+    historySeed.js       # History seeding module  
+
+routes/  
+  create/  
+    createAppointment.js     # Create appointment with validation  
+    createCar.js             # Add car for a client  
+    createClient.js          # Register new client  
+    createHistoryEntry.js    # Log service history after appointment  
+
+  get/  
+    appointments.js          # Get appointments  
+    cars.js                  # Get cars  
+    clients.js               # Get clients  
+    getCarHistory.js         # Get history by car ID  
+    getClientAppointments.js # Get client appointments  
+    getClientCars.js         # Get client cars  
+    history.js               # Get full service history  
+
+  patch/  
+    patchAppointments.js     # Update appointment fields  
+    patchClients.js          # Update client info  
+    patchHistory.js          # Update history entry  
+
+  utills/  
+    checkAvailability.js     # Check appointment slot availability  
+
 ### frontend/  
 Some Angulara Prototype 
 
