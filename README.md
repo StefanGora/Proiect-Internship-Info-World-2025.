@@ -102,20 +102,20 @@ routes/
 Some Angulara Prototype 
 
 ### frontend-react/
-├── public/                 # Static assets
-├── src/
-│   ├── App.tsx             # Root component
-│   ├── main.tsx            # Entry point
-│   ├── assets/             # CSS, SVGs
-│   ├── components/         # Reusable UI components
-│   ├── hooks/              # Custom React hooks
-│   ├── models/             # TS data models
-│   ├── pages/              # Page components
-│   └── types/              # Type definitions
-├── vite.config.ts          # Vite configuration
-├── package.json            # Frontend dependencies & scripts
-├── tsconfig.*.json         # TypeScript configs
-└── README.md               # Project readme
+frontend-react/  
+public/                  # Static assets (HTML, icons, etc.)  
+App.tsx                  # Root React component  
+main.tsx                 # Entry point  
+assets/                  # CSS and media  
+components/              # Reusable UI components  
+hooks/                   # Custom React hooks  
+models/                  # TypeScript data models  
+pages/                   # Route-level page components  
+types/                   # Type definitions  
+vite.config.ts           # Vite configuration  
+package.json             # Frontend dependencies and scripts  
+tsconfig.json            # TypeScript compiler config  
+tsconfig.node.json       # Node-specific TS config  
 
 ## 📄 Database Schema
 
