@@ -132,50 +132,50 @@ MakeAppointment.css            # Styles for the make appointment form
 svg/                           # SVG graphics used in UI
 react.svg                      # React logo (can be replaced)
 
-components/                    # Reusable UI components (grouped by purpose)
-AddCarFormComponent.tsx        # Form for adding a car
-AdminAppointmentCardComponent.tsx # Card for admin to view/manage an appointment
-AppointmentCardComponent.tsx   # General appointment display card
-AppointmentListComponent.tsx   # List of appointments (for client/admin)
-AvailabilityFormComponent.tsx  # Form to check available appointment slots
-CarCardComponent.tsx           # UI component for displaying car info
-CarListComponent.tsx           # Displays list of client’s cars
-CloseTicketFormComponent.tsx   # Admin form to close appointment/ticket
-MakeAppointmentFormComponent.tsx # Client form to book new appointment
-TicketComponent.tsx            # Represents a repair/service ticket
-TicketListComponent.tsx        # List of all tickets (for admin)
-UserProfileComponent.tsx       # Displays client profile information
+components/                             # Reusable UI components (grouped by purpose)
+AddCarFormComponent.tsx                 # Form for adding a car
+AdminAppointmentCardComponent.tsx       # Card for admin to view/manage an appointment
+AppointmentCardComponent.tsx            # General appointment display card
+AppointmentListComponent.tsx            # List of appointments (for client/admin)
+AvailabilityFormComponent.tsx           # Form to check available appointment slots
+CarCardComponent.tsx                    # UI component for displaying car info
+CarListComponent.tsx                    # Displays list of client’s cars
+CloseTicketFormComponent.tsx            # Admin form to close appointment/ticket
+MakeAppointmentFormComponent.tsx        # Client form to book new appointment
+TicketComponent.tsx                     # Represents a repair/service ticket
+TicketListComponent.tsx                 # List of all tickets (for admin)
+UserProfileComponent.tsx                # Displays client profile information
 
-hooks/                         # Custom React hooks for API and state logic
-useAdminAppointments.ts        # Fetch admin appointment data
-useAdminLogin.ts               # Handle admin login flow
-useCancelAppointment.ts        # Cancel a client appointment
-useCloseTicket.ts              # Submit form to close ticket
-useGetAvailability.ts          # Get available time slots for appointments
-useGetClientAppointments.ts    # Fetch client's appointment history
-useGetClientById.ts            # Fetch client data by ID
-useGetClientCars.ts            # Fetch list of client’s registered cars
-useInsertCar.ts                # API logic to insert a new car
-useSimulateLogin.ts            # Simulate a client login (mock session)
-useSubmitAppointments.ts       # Submit appointment booking form
-useUpdateAppointment.ts        # Patch/update existing appointments
+hooks/                                  # Custom React hooks for API and state logic
+useAdminAppointments.ts                 # Fetch admin appointment data
+useAdminLogin.ts                        # Handle admin login flow
+useCancelAppointment.ts                 # Cancel a client appointment
+useCloseTicket.ts                       # Submit form to close ticket
+useGetAvailability.ts                   # Get available time slots for appointments
+useGetClientAppointments.ts             # Fetch client's appointment history
+useGetClientById.ts                     # Fetch client data by ID
+useGetClientCars.ts                     # Fetch list of client’s registered cars
+useInsertCar.ts                         # API logic to insert a new car
+useSimulateLogin.ts                     # Simulate a client login (mock session)
+useSubmitAppointments.ts                # Submit appointment booking form
+useUpdateAppointment.ts                 # Patch/update existing appointments
 
-models/                        # TypeScript data models for strong typing
-admin-appointment.model.ts     # Model for admin appointments
-appointment.model.ts           # Model for appointments
-car.model.ts                   # Model for cars
-client.model.ts                # Model for clients
+models/                                 # TypeScript data models for strong typing
+admin-appointment.model.ts              # Model for admin appointments
+appointment.model.ts                    # Model for appointments
+car.model.ts                            # Model for cars
+client.model.ts                         # Model for clients
 
-pages/                         # Top-level pages mapped to routes
-AcceptedAppointmentsPage.tsx   # Admin view of accepted appointments
-AdminPage.tsx                  # Main dashboard for admin
-ClientPage.tsx                 # Main dashboard for clients
-LoginPage.tsx                  # Login page (admin/client selection)
-PendingAppointmentsPage.tsx    # Admin view of pending appointments
+pages/                                  # Top-level pages mapped to routes
+AcceptedAppointmentsPage.tsx            # Admin view of accepted appointments
+AdminPage.tsx                           # Main dashboard for admin
+ClientPage.tsx                          # Main dashboard for clients
+LoginPage.tsx                           # Login page (admin/client selection)
+PendingAppointmentsPage.tsx             # Admin view of pending appointments
 
-types/                         # Additional custom type definitions
-appointmentFormData.ts         # Types for appointment form fields
-carFormData.types.ts           # Types for car registration form
+types/                                  # Additional custom type definitions
+appointmentFormData.ts                  # Types for appointment form fields
+carFormData.types.ts                    # Types for car registration form
 
 
 ## 📄 Database Schema
